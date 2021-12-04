@@ -1,0 +1,15 @@
+.navbar-color-custom {
+	background-color: #f5c938;
+	
+}
+
+.logo-text {
+	font: 700 2rem/1.5rem "Open Sans", sans-serif;
+	text-decoration: none;
+}
+
+.logo-brand{
+    height: 40px;
+    width: 40px;
+   
+}
