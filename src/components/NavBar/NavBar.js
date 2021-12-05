@@ -1,7 +1,6 @@
 import React from "react";
 import paw from './paw.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { CartWidget } from "../CartWidget";
 import "./NavBar.css";
 export const NavBar = () => {
   return (
@@ -48,7 +47,7 @@ export const NavBar = () => {
             </li>   
           </ul>
           <div className="d-flex">
-             <FontAwesomeIcon icon={faShoppingCart } />
+            <CartWidget/>
           </div>
         </div>
       </div>
