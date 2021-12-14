@@ -1,11 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-export const ItemCount = ({
+
+const ItemCount = ({
     stock,
-    nombre,
     inicial,
-    img,
-    descripcion,
     addCart
 }) => {
     //const [stock] =props.stock
@@ -24,11 +22,8 @@ export const ItemCount = ({
     }
     return(
         <div className="card" style={{width: "18rem"}}>
-             <img src={img} className="card-img-top" alt={nombre}/>
-                <div className="card-body">
-                    <h5 className="card-title">{nombre}</h5>
-                    <p className="card-text">{descripcion}</p>
-                    <p className="card-text">Stock {stock}</p>
+             
+                
                     <div className='w-100 d-flex'>
                         {/*Boton para decrementar contador */}
                         <button
@@ -59,8 +54,9 @@ export const ItemCount = ({
 						</button>
 					</div>
                 </div>
-        </div>
+        
     )
         
     
 }
+export default ItemCount
