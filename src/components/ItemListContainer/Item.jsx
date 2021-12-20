@@ -1,9 +1,9 @@
 import React from "react";
 
-const Item = ({ key, title, description, pictureUrl, stock, price}) => {
-   
+const Item = ({ title, description, pictureUrl, stock, price}) => {
+  
   return (
-    <>
+    
     <div className="card card-block" style={{ width: "15rem" }}>
       <img src={pictureUrl} className="card-img-top" alt={title} />
       <div className="card-body">
@@ -18,7 +18,7 @@ const Item = ({ key, title, description, pictureUrl, stock, price}) => {
         </button>
       </div>
     </div>
-    </>
+    
   )
     
 

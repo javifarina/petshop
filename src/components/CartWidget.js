@@ -5,6 +5,7 @@ export const CartWidget = () => {
     return (
         <div>
              <FontAwesomeIcon icon={faShoppingCart } /> 4
+             
         </div>
     )
 }

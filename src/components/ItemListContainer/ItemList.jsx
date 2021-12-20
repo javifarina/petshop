@@ -1,12 +1,11 @@
 import React from 'react'
-
 import Item  from './Item'
 const ItemList = ({items}) => {
     
     return (
-        <div key={items.id}>
-            {items.map((elemento)=>(<Item
-            key={elemento.id}
+        <>
+        { items.map((elemento)=>(<Item key ={elemento.id}
+           // id={elemento.id}
             title={elemento.title}
             description={elemento.description}
             pictureUrl={elemento.pictureUrl}
@@ -16,8 +15,10 @@ const ItemList = ({items}) => {
             pet={elemento.pet}
             
             />))}
+        </>
             
-        </div>
+            
+        
     )
 }
 export default ItemList
