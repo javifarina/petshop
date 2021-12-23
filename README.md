@@ -1,5 +1,5 @@
 # App PetShop - Patitas
-
+![image](https://github.com/javifarina/petshop/blob/ee97bab24f2cb683a43526ce56e7729b8869e43c/Animation.gif)
 ## Propósito:
 
 ### `Desarrollo de E-commers ventas de Artículos para Mascotas`
