@@ -1,8 +1,8 @@
-# App PetShop
+# App PetShop - Patitas
 
 ## Propósito:
 
-### `Desarrollo de E-commers ventas de Artículos para MAscotas`
+### `Desarrollo de E-commers ventas de Artículos para Mascotas`
 
 ## Tipos de artículos en la tienda:
 
