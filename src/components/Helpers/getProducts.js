@@ -7,6 +7,7 @@ const getProductsByList= new Promise((resolve, reject) =>{
         resolve(ProductList)
     },2000)
 })
+
 //Funcion que Trae Todos los productos 
 const getProductos = async (setState) =>{
     try{
@@ -32,5 +33,20 @@ const getItem = async(id, setState) =>{
     }
 
 }
+// Funcion que Filtra Porductos Por Categoria
+
+const byCategory =(pet,arr) => arr.filter((c) => c.pet === pet)
+
+const getProductByCategory = async(pet,setState) =>{
+    try{
+        const result = await getProductsByList
+        setState(byCategory(pet,result))
+        
+    } 
+    catch(error){
+        console.log(error)
+    }
+
+}
 //exporta la funciones para ser usadas en ItemDetailContainer e ItemListContainer
-export { getProductos, getItem }
+export { getProductos, getItem, getProductByCategory  }

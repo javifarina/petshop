@@ -1,6 +1,15 @@
 .colorBack{
-    background-color: #f5c938;
+    background-color: #F14A16;
     text-align: center;
-    position: absolute;
-    bottom: -8em;
+    color: beige;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    
+}
+.colorBackAutors{
+    background-color: #370665;
+    text-align: center;
+    color: beige;
 }

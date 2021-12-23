@@ -2,7 +2,7 @@ import React, { useEffect, useState}from 'react'
 import { getItem } from '../Helpers/getProducts'
 import ItemDetail from './ItemDetail';
 import Spinners from '../spinner/Spinners';
-
+import '../container.css'
 
 const ItemDetailContainer = ({id}) => {
      //variable de estado cargar item
@@ -12,16 +12,12 @@ const ItemDetailContainer = ({id}) => {
   useEffect(() => {
     getItem(id, setProduct);
    
-    console.log(product);
-    
-  },[id, product]);
+     },[id, product]);
   
-
-
   return <>
-    <h3 className="d-flex justify-content-center">Detalle de Producto</h3>
+    <h3 className="d-flex justify-content-center fixeContainer">Detalle de Producto</h3>
     {!product ? <Spinners /> : null}
-    <div className="row">{product && <ItemDetail item={product} />}</div>
+    <div className="row justify-content-center">{product && <ItemDetail item={product} />}</div>
     </>;
 };
 

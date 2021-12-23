@@ -1,12 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-
+import toast, { Toaster } from 'react-hot-toast';
 const ItemCount = ({
     stock,
     inicial,
-    addCart
+    
 }) => {
-    //const [stock] =props.stock
+    const addCart =() =>{
+        toast ('El producto se Agrego al Carrito.')
+    }
 
     //variable de estado muesstra la de producto
    const [contador, setContador] = useState(inicial)
@@ -21,7 +23,8 @@ const ItemCount = ({
         if (contador >1) setContador(contador -1)
     }
     return(
-        <div className="card" style={{width: "18rem"}}>
+       
+        <div className="card" style={{width: "29rem"}}>
              
                 
                     <div className='w-100 d-flex'>
@@ -45,13 +48,14 @@ const ItemCount = ({
                     </div>
                     <div className='d-grid gap-2 m-3'>
 						<button
-							onClick={() => addCart()}
+							onClick={addCart}
 							className="btn btn-info"
 							size='lg'
                             disabled={stock===0 ? true:null}
 						>
 							Agregar al Carrito
 						</button>
+                        <Toaster />
 					</div>
                 </div>
         

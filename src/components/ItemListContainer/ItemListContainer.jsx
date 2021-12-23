@@ -2,6 +2,7 @@ import React, {useState,useEffect}  from 'react'
 import { getProductos } from '../Helpers/getProducts'
 import ItemList from './ItemList'
 import Spinners from '../spinner/Spinners'
+import '../container.css'
 //Mock de Productos para la tienda
 
 const ItemListContainer = () => {
@@ -10,13 +11,13 @@ const ItemListContainer = () => {
     
    		useEffect(() => {
             getProductos(setProducts);
-            console.log(products);
+            
         },[products]);
     
    
      
     return (
-        <div>
+        <div className="row justify-content-center fixeContainer">
           <h3 className="d-flex justify-content-center">Catálogo de Productos</h3>
              {!products ? <Spinners /> : null}
             {products && <ItemList  items={products} />}

@@ -1,10 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import paw from './paw.svg'
+import cat from '../../img/catsolid.svg'
+import dog from '../../img/dogsolid.svg'
+import fish from '../../img/fishsolid.svg'
+import bird from '../../img/crowsolid.svg'
 import { CartWidget } from "../CartWidget";
 import "./NavBar.css";
 export const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-color-custom">
+    <nav className="navbar navbar-expand-lg navbar-color-custom fixed-top">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -18,38 +23,39 @@ export const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a className="navbar-brand" href="/">
-          <img src={paw} alt="paw" className="logo-brand"/>
-          </a>
-          <a className="navbar-brand logo-text" href="/">
-            PetShop
-          </a>
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <NavLink className="navbar-brand" to="/">
+            <img src={paw} alt="paw" className="logo-brand"/>
+          </NavLink>
+          <NavLink link to ="/" className="navbar-brand logo-text" >
+            Patitas
+          </NavLink>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+            
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
-                Home
-              </a>
-            </li>
+              <NavLink className="nav-link" to ={'pet/cat'}>
+              <img src={cat} alt="cat" className="logo-brand"/>
+              </NavLink >
+            </li>   
             <li className="nav-item">
-              <a className="nav-link" href="Mascotas">
-                Mascotas
-              </a>
-            </li>
+              <NavLink className="nav-link" to ={'pet/dog'}>
+              <img src={dog} alt="dog" className="logo-brand"/>
+              </NavLink>
+            </li>   
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Marcas
-              </a>
-            </li>
+              <NavLink className="nav-link" to ={'pet/fish'}>
+              <img src={fish} alt="fish" className="logo-brand"/>
+              </NavLink>
+            </li>   
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Servicios
-              </a>
+              <NavLink className="nav-link" to ={'pet/bird'}>
+              <img src={bird} alt="bird" className="logo-brand"/>
+              </NavLink>
             </li>   
           </ul>
           <div className="d-flex">
             <CartWidget/>
           </div>
-        </div>
+        </div>  
       </div>
     </nav>
   );
