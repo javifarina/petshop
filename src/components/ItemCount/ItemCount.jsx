@@ -4,10 +4,11 @@ import toast, { Toaster } from 'react-hot-toast';
 const ItemCount = ({
     stock,
     inicial,
-    
+    onAdd
 }) => {
     const addCart =() =>{
         toast ('El producto se Agrego al Carrito.')
+        onAdd(contador)
     }
 
     //variable de estado muesstra la de producto

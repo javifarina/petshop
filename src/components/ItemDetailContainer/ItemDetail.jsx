@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState}from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 const ItemDetail = ({ item }) => {
+  const [contador,setContador ] = useState (null)
+  const onAdd=(contador)=>{
+    setContador(contador)
+    console.log("Cantidad en itemDetail",contador)
+  }
   return (
     <div className="card mb-3" style={{ width: "48rem" }}>
       <div className="row g-0">
@@ -23,10 +28,10 @@ const ItemDetail = ({ item }) => {
             <p className="card-text">
               <small className="text-muted">Last updated 3 mins ago</small>
             </p>
-            <ItemCount stock={item.stock} inicial={item.inicial} />
+            {!contador && <ItemCount stock={item.stock} inicial={item.inicial} onAdd={onAdd}/>}
             <div className="d-grid gap-2 m-3">
-              <Link to="/checkout" className="btn btn-success lg">
-                Finalizar
+              <Link to="/cart" className="btn btn-success lg">
+                Terminar mi Compra
               </Link>
             </div>
           </div>

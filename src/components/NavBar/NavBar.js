@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import paw from './paw.svg'
 import cat from '../../img/catsolid.svg'
 import dog from '../../img/dogsolid.svg'
@@ -26,7 +26,7 @@ export const NavBar = () => {
           <NavLink className="navbar-brand" to="/">
             <img src={paw} alt="paw" className="logo-brand"/>
           </NavLink>
-          <NavLink link to ="/" className="navbar-brand logo-text" >
+          <NavLink to ="/" className="navbar-brand logo-text" >
             Patitas
           </NavLink>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
