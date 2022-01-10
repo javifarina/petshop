@@ -1,12 +1,17 @@
 import React, {useState}from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import { useContexCart } from "../../context/CartContex";
 const ItemDetail = ({ item }) => {
   const [contador,setContador ] = useState (null)
+  const { addToCart } = useContexCart()
   const onAdd=(contador)=>{
     setContador(contador)
     console.log("Cantidad en itemDetail",contador)
+    addToCart(item,contador)
+    
   }
+  
   return (
     <div className="card mb-3" style={{ width: "48rem" }}>
       <div className="row g-0">
@@ -31,7 +36,7 @@ const ItemDetail = ({ item }) => {
             {!contador && <ItemCount stock={item.stock} inicial={item.inicial} onAdd={onAdd}/>}
             <div className="d-grid gap-2 m-3">
               <Link to="/cart" className="btn btn-success lg">
-                Terminar mi Compra
+                Ir al Carrito
               </Link>
             </div>
           </div>

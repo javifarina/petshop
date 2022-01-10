@@ -1,8 +1,9 @@
 //Librerías
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Componentes
 import { NavBar } from './components/NavBar/NavBar';
+import CartContex  from './context/CartContex'
 //import ItemListContainer  from './components/ItemListContainer/ItemListContainer';
 //import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
@@ -17,7 +18,7 @@ import Checkout from './Page/Checkout';
 
 function App() {
   return (
-    <>  
+    <CartContex>  
     <BrowserRouter>
        {/*Menú*/}
        <NavBar/>
@@ -35,7 +36,7 @@ function App() {
         <Footer/>
     </BrowserRouter>
        
-    </>
+    </CartContex>
     
   );
 }

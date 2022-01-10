@@ -6,8 +6,11 @@ import dog from '../../img/dogsolid.svg'
 import fish from '../../img/fishsolid.svg'
 import bird from '../../img/crowsolid.svg'
 import { CartWidget } from "../CartWidget";
+import { useContexCart } from "../../context/CartContex";
 import "./NavBar.css";
 export const NavBar = () => {
+  const {allProducInCart} = useContexCart()
+  let cant = allProducInCart()
   return (
     <nav className="navbar navbar-expand-lg navbar-color-custom fixed-top">
       <div className="container-fluid">
@@ -53,7 +56,7 @@ export const NavBar = () => {
             </li>   
           </ul>
           <div className="d-flex">
-            <CartWidget/>
+            <CartWidget cont={cant}/>
           </div>
         </div>  
       </div>
