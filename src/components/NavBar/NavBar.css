@@ -1,5 +1,5 @@
 .navbar-color-custom {
-	background-color: #f5c938;
+	background-color: #370665;
 	
 }
 
@@ -15,4 +15,15 @@
 }
 .position{
 	position:fixed; top:0
+}
+.navbar-collapse{
+	flex-grow:initial
+}
+.carW{
+	color: tomato;
+	text-decoration: none;
+}
+ .nav-link {
+    padding-right: 4.5rem;
+    padding-left: 0.5rem;
 }

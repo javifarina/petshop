@@ -4,7 +4,7 @@ import Cart from '../components/cart/Cart'
 const Checkout = () => {
     return (
         <div>
-            <h3 className="d-flex justify-content-center fixeContainer">Comparas </h3>
+            <h3 className="d-flex justify-content-center fixeContainer">Compras </h3>
         <Cart/>
         </div>
     )

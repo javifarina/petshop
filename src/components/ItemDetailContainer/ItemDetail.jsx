@@ -35,9 +35,10 @@ const ItemDetail = ({ item }) => {
             </p>
             {!contador && <ItemCount stock={item.stock} inicial={item.inicial} onAdd={onAdd}/>}
             <div className="d-grid gap-2 m-3">
-              <Link to="/cart" className="btn btn-success lg">
-                Ir al Carrito
-              </Link>
+              {contador > 0 ?  <Link to="/cart" className="btn btn-success lg">
+                Terminar mi compra
+              </Link>: null}
+             
             </div>
           </div>
         </div>

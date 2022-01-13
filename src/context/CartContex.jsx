@@ -53,6 +53,15 @@ const CartContex = ({children}) => {
        return totalInCart
      }
      /**
+      * Funcion que calcula Precio total de los productos en el carrito
+      */
+
+     const totalPrice = () =>{
+       let total = 0
+       cart.forEach((p) =>(total += p.price * p.qty))
+       return total
+     }
+     /**
       * Funcion elimina todos los elementos del carrito
       */
      const deletAllProduct =()=>{
@@ -63,7 +72,8 @@ const CartContex = ({children}) => {
         addToCart,
         deletById,
         allProducInCart,
-        deletAllProduct
+        deletAllProduct,
+        totalPrice
     }
 
 

@@ -1,8 +1,9 @@
 //Librerías
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "../node_modules/bootstrap/dist/js/bootstrap";
 //Componentes
-import { NavBar } from './components/NavBar/NavBar';
+//import { NavBar } from './components/NavBar/NavBar';
 import CartContex  from './context/CartContex'
 //import ItemListContainer  from './components/ItemListContainer/ItemListContainer';
 //import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -15,13 +16,15 @@ import Category from './Page/Category';
 import Pets from './Page/Pets';
 import Servicios from './Page/Servicios';
 import Checkout from './Page/Checkout';
+import NavBar1 from './components/NavBar/NavBar1';
 
 function App() {
   return (
     <CartContex>  
     <BrowserRouter>
        {/*Menú*/}
-       <NavBar/>
+       <NavBar1/>
+      {/**<NavBar/> */} 
         <Routes>
             <Route path ="/" element={<Home/>}/>
             <Route path ="/pets" element={<Pets/>}/>

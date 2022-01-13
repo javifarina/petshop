@@ -25,7 +25,7 @@ const ItemCount = ({
     }
     return(
        
-        <div className="card" style={{width: "29rem"}}>
+        <div className="card" style={{width: "auto"}}>
              
                 
                     <div className='w-100 d-flex'>

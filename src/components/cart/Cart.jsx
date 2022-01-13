@@ -5,7 +5,8 @@ import { useContexCart } from '../../context/CartContex'
 import {Link}  from 'react-router-dom'
 import ItemCart from './ItemCart'
 const Cart = () => {
-    const { cart, deletAllProduct } = useContexCart()
+    const { cart, deletAllProduct, totalPrice } = useContexCart()
+    let total = totalPrice()
     console.log(cart)
     return (
         <div className="d-flex flex-column justify-content-center align-items-center mt-3">
@@ -30,7 +31,11 @@ const Cart = () => {
                     </Link>
                 </div>
             )}
-            
+            {cart.length > 0 && (
+        <h2 className="my-1">
+          Total: ${new Intl.NumberFormat().format(total)}
+        </h2>
+      )}
             {cart.length > 0 && (
                 <div className="mb-3">
                    
