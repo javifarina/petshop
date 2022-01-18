@@ -20,6 +20,7 @@ const CartContex = ({children}) => {
         let match = new_pro.find((p)=> p.id === product.id)
         match.qty += qty
         setCart(new_pro) 
+        console.log("nuevo",cart)
        
       }else{
         const new_pro ={...product}
