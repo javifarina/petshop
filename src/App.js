@@ -12,7 +12,7 @@ import Pets from "./Page/Pets";
 import Servicios from "./Page/Servicios";
 import Cartpage from "./Page/Cartpage";
 import NavBar1 from "./components/NavBar/NavBar1";
-
+import FormSale from "./components/Form/FormSale";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
           <Route path="/cart" element={<Cartpage />} />
           <Route path="pet/:pet" element={<Category />} />
           <Route path="producto/:id" element={<Detail />} />
+          <Route path="/checkout" element={<FormSale/>}/>
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />

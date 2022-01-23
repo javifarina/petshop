@@ -53,9 +53,6 @@ const Cart = () => {
         
     }
     
-
-
-   
     console.log(cart)
     return (
         <div className="d-flex flex-column justify-content-center align-items-center mt-3">
@@ -103,6 +100,9 @@ const Cart = () => {
                     >
                         Terminar Compra...
                     </button>
+                    <Link to="/checkout" className="btn btn-outline-primary">
+                        Comprar ?
+                    </Link>
                 </div>
             )}
 
