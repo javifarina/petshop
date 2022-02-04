@@ -2,14 +2,15 @@ import React, {useState}from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { useContexCart } from "../../context/CartContex";
+import toast, { Toaster } from "react-hot-toast"
 const ItemDetail = ({ item }) => {
   const [contador,setContador ] = useState (null)
   const { addToCart } = useContexCart()
   const onAdd=(contador)=>{
-    setContador(contador)
-    console.log("Cantidad en itemDetail",contador)
     addToCart(item,contador)
-    
+    setContador(contador)
+    toast.success("El producto se Agrego al Carrito");
+
   }
   
   return (
@@ -46,6 +47,10 @@ const ItemDetail = ({ item }) => {
                 Volver al Home
         </Link>
       </div>
+      <Toaster
+         position="top-center"
+        reverseOrder={false}
+      />
     </div>
   );
 };

@@ -7,12 +7,16 @@ export const useContexCart = () =>{
     return useContext(contexto)
 }
 const CartContex = ({children}) => {
+
+  let cartLocalStorage = JSON.parse(localStorage.getItem("cartLocal"))
  
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(
+      cartLocalStorage ? cartLocalStorage :[])
+
     const [cartCount, setCartCount] = useState(0)
-    /**
-     * Funcion que Agrega productos al carrito de Compras
-     */
+
+    localStorage.setItem("cartLocal",JSON.stringify(cart))
+    
     const addToCart = (product,qty) =>{
     
       if (isInCart(product.id)){
@@ -31,40 +35,29 @@ const CartContex = ({children}) => {
     
       setCartCount(cartCount + qty)
     }
-      /**
-       * 
-       * Funcion que busca si existe elemento para actualizar cantidad
-       */
+      
     const isInCart = (id) => cart.some((p) => p.id === id)
     
-     /**
-      * Funcion que elimina elementos del carriro de compras
-      */
+    
      const deletById = (id) =>{
        let newCart = cart.filter((p) =>p.id !== id )
        setCart(newCart)
      }
 
-     /**
-      * Funcion Cuenta los productos del carrito 
-      */
+     
      const allProducInCart =()=>{
        let totalInCart = 0
        cart.forEach((p) => (totalInCart += p.qty))
        return totalInCart
      }
-     /**
-      * Funcion que calcula Precio total de los productos en el carrito
-      */
+    
 
      const totalPrice = () =>{
        let total = 0
        cart.forEach((p) =>(total += p.price * p.qty))
        return total
      }
-     /**
-      * Funcion elimina todos los elementos del carrito
-      */
+     
      const deletAllProduct =()=>{
        setCart([])
      }

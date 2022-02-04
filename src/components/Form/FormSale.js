@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useContexCart } from "../../context/CartContex";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
-import { useHistory } from "react-router";
 import swal from "sweetalert";
 const FormSale = () => {
   const { cart, deletAllProduct, totalPrice } = useContexCart();
@@ -20,7 +19,7 @@ const FormSale = () => {
     return cartFilter;
   });
   const checkoutOK = (id) => {
-    console.log(id)
+    
     swal({
       title: "Gracias por tu Compra PetShop Patitas ",
       text: "El número de tu compra es: "+id,
@@ -48,7 +47,6 @@ const FormSale = () => {
     }).then((res) => {
       const docs = res
       const id = docs.id
-      console.log(id)
       setIdcompra(id)
      
       
