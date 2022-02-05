@@ -80,49 +80,55 @@ const FormSale = () => {
   return (
     <div className="container" style={{ marginTop: "100px", width: "40%" }}>
       <h3 className="text-center"> Terminar su Compra</h3>
-      <form onSubmit={checkout}>
-        <input
+      <form onSubmit={checkout} >
+      <div className="mb-3">
+      <input
           type="text"
           className="form-control mb-2"
-          placeholder="Ingrese Nombre"
+          placeholder="Nombre"
           onChange={(e) => setNombre(e.target.value)}
           value={nombre}
           name="nombre"
           required
           minLength="4"
-          maxLength="10"
+          maxLength="20"
           pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
           title="Solo se aceptan Caracteres"
         />
-      
+      </div>
+        
+      <div className="mb-3">
         <input
           type="text"
-          className="form-control mb-2"
-          placeholder="Ingrese Apellido"
+          className="form-control"
+          placeholder="Apellido"
           onChange={(e) => setApellido(e.target.value)}
           value={apellido}
           name="apellido"
           required
           minLength="4"
-          maxLength="10"
+          maxLength="20"
           pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
           title="Solo se aceptan Caracteres"
         />
+        </div>
+        <div className="mb-3">
         <input
           type="mail"
-          className="form-control mb-2"
-          placeholder="Ingrese un Email"
+          className="form-control "
+          placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           name="email"
           required
           minLength="6"
-          maxLength="20"
+          maxLength="40"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           title="Ingrese correo válido  con formato nombre@dominio.com "
         />
+        </div>
         <div className="text-center">
-            <button className="btn btn-success me-2 " type="submit"
+            <button className="btn btn-success  " type="submit"
             disabled={nombre ==="" && apellido==="" && email ===""  ? true : null}>
               Terminar Compra
             </button>

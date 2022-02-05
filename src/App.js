@@ -9,7 +9,6 @@ import Error from "./Page/Error";
 import Detail from "./Page/Detail";
 import Category from "./Page/Category";
 import Pets from "./Page/Pets";
-import Servicios from "./Page/Servicios";
 import Cartpage from "./Page/Cartpage";
 import NavBar1 from "./components/NavBar/NavBar1";
 import FormSale from "./components/Form/FormSale";
@@ -22,7 +21,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pets" element={<Pets />} />
-          <Route path="/services" element={<Servicios />} />
           <Route path="/cart" element={<Cartpage />} />
           <Route path="pet/:pet" element={<Category />} />
           <Route path="producto/:id" element={<Detail />} />

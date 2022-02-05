@@ -3,6 +3,8 @@
 ## Propósito:
 
 ### `Desarrollo de E-commers ventas de Artículos para Mascotas`
+👉🏼[Toque para ver proyecto](https://petshop-c84de.web.app//)👈🏼
+
 
 ## Tipos de artículos en la tienda:
 
@@ -18,6 +20,9 @@
 - JavaScript
 - React
 - Boostrap 5
+- Firebase
+- Hosting Google
+
 
 ### `Dependencias Instaladas por npm`
 
@@ -26,5 +31,11 @@
 - npm i --save @fortawesome/fontawesome-svg-core
 - npm install --save @fortawesome/free-solid-svg-icons
 - npm install --save @fortawesome/react-fontawesome
+- npm install --save  sweetalert
+- npm install react-hot-toast
+- npm install --save firebase
 
-  **NOTA: Primer Entrega de Proyecto Francsico Javier Fariña **
+### `Deploy de Proyecto`
+
+
+ 
