@@ -35,7 +35,8 @@
 - npm install react-hot-toast
 - npm install --save firebase
 
-### `Deploy de Proyecto`
+### `Descarga del  Proyecto`
+
 
 
  
