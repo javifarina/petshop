@@ -8,7 +8,7 @@ import { useContexCart } from '../../context/CartContex';
 const ItemCart = ({id, img, title, qty, price,description}) => {
   const { deletById } = useContexCart()
     return (
-        <Card style={{ maxWidth: "600px" }} className=" mt-3">
+        <Card style={{ width: "25rem", }} className=" card mb-3">
       <Row>
         <Col
           xs={6}
@@ -18,7 +18,7 @@ const ItemCart = ({id, img, title, qty, price,description}) => {
             <Card.Img
               variant="top"
               src={img}
-              style={{ height: "auto", objectFit: "contain" }}
+              style={{ height: "90px", objectFit: "contain" }}
             />
           </Link>
         </Col>

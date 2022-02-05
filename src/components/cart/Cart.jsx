@@ -1,10 +1,8 @@
 import React from "react";
 import { useContexCart } from "../../context/CartContex";
-//import {addDoc, collection, serverTimestamp} from 'firebase/firestore'
-//import { db } from '../firebase'
 import { Link } from "react-router-dom";
 import ItemCart from "./ItemCart";
-//import swal from 'sweetalert'
+
 
 const Cart = () => {
   const { cart, deletAllProduct, totalPrice } = useContexCart();
@@ -50,10 +48,12 @@ const Cart = () => {
           <Link to="/" className="btn btn-outline-primary btn-sm">
             Seguir Comprando..
           </Link>
-
-          <Link to="/checkout" className="btn btn-success btn-sm">
+          <div className="d-grid gap-2">
+          <Link to="/checkout" className="btn btn-success">
             Terminar Compra...
           </Link>
+          </div>
+         
         </div>
       )}
     </div>
