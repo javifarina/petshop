@@ -43,7 +43,7 @@ El sistema despliega  los diferentes artículos que están almacenados en una ba
 - npm install react-hot-toast
 - npm install --save firebase
 
-### `Instalacion de  Proyecto`
+### `Instalación de la App`
 1. Crear una carpeta.
 - Linux y Mac 
 ```
@@ -71,7 +71,7 @@ $ cd petshop
 $ npm run i
 
 ```
-5. Ejecutar la aplicacion
+5. Ejecutar la aplicación
 ```
 $ npm run start
 
