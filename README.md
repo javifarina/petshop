@@ -25,7 +25,9 @@ El sistema despliega  los diferentes artículos que están almacenados en una ba
 ### `Tecnología aplicada`
 
 - JavaScript
-- React
+- React JS
+- HTML 5
+- CSS
 - Boostrap 5
 - Firebase
 - Hosting Google
